@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iframe Examples</title>
+  </head>
+  <body>
+    <h1>Select example</h1>
+    <form onsubmit="openExample(this); return false;">
+      <select name="framework">
+        <option value="vanilla">Vanilla</option>
+        <option value="react">React</option>
+      </select>
+      <hr />
+      <select name="example">
+        <option value="nav">Navigation</option>
+        <option value="auth">Authorization</option>
+        <option value="theme">Styling</option>
+      </select>
+      <hr />
+      <input type="submit" value="Submit" />
+    </form>
+    <script type="text/javascript">
+      function openExample(evt) {
+        const data = new FormData(evt)
+        const fw = data.get('framework')
+        const ie = data.get('example')
+        const url = `./examples/${fw}/${ie}.html`
+        window.location.href = url
+      }
+    </script>
+  </body>
+</html>

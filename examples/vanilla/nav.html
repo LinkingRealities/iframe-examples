@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/main.css"  />
+    <title>Iframe Navigation Example</title>
+  </head>
+  <body>
+    <article>
+      <aside>
+        <header>Go to:</header>
+        <ul>
+          <li><button id="login">Login</button></li>
+          <li><button id="register">Register</button></li>
+          <li><button id="recover">Recover Password</button></li>
+        </ul>
+      </aside>
+      <section>
+        <iframe id="iframe" src="https://iframe.unionavatars.com"></iframe>
+      </section>
+    </article>
+    <script type="module">
+      import { renderApp } from '/src/vanilla/index.ts'
+      renderApp('Nav')
+    </script>
+  </body>
+</html>
